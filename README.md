@@ -16,8 +16,7 @@ El Pre-procesamiento va ligado a ajustar nuestros modelos 3d de la mejor forma c
 
 Los descriptores de formas pueden variar bastante, desde descriptores con histogramas y metricas de volumenes/areas hasta descriptores por curvaturas, firmas espectrales o por redes neuronales
 
-👽-> ![3D descriptores generales](Codes/3D_Shape_descriptors.ipynb)
-
+✍️💼-> <a href="Codes/3D_Shape_descriptors.ipynb">3D descriptores generales</a>
 Sin embargo, para nuestro caso solo nos interesan aquellos que sean robustoz frente a isometrías (transformaciones rigidas).
 siendo relevante aquellos basados en medidas como curvaturas generales o geodesicas. ligando esto a su vez a sistemas espectrales con enfasis en autovalores y autovectores. Cabe resaltar que las redes neuronales tambien son planteadas como tecnicas robustaz frente a estas variaciones de rotacion y traslación.
 
