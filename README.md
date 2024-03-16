@@ -1,33 +1,42 @@
 # Correspondencia de formas 3D
 
-La CF podemos dividirla principalmente en tres areas de accion:
+La correspondencia se forma se puede dividir en tres bloques principales:
 ![Pipeline Shape Correspondence](/pics/pipe1.png)
 
 
 ## Pre procesamiento
 
-El Pre-procesamiento va ligado a ajustar nuestros modelos 3d de la mejor forma cosa que filtremos, y organicemos los datos para que sean facilmente procesables por nuestros maquinas.
+El preprocesamiento está destinado a ajustar nuestros modelos 3D de la mejor manera posible, de modo que filtremos y organicemos los datos para que sean fácilmente procesables por nuestras máquinas.
 
-*Destacando para nuestro caso de estudio princiapl la reduccion de vertices y faces.
+*Destacando en nuestro caso de estudio principal la reducción de vértices y caras.
 ![Decimación de Vértices y Caras](/pics/prepro.png)
     
 
 ## Aprendizaje de Forma (Descriptor)
 
-Los descriptores de formas pueden variar bastante, desde descriptores con histogramas y metricas de volumenes/areas hasta descriptores por curvaturas, firmas espectrales o por redes neuronales
+Los descriptores de formas pueden variar bastante, desde histogramas y métricas de volúmenes/áreas hasta curvaturas, firmas espectrales o redes neuronales.
 
 ✍️💼-> <a href="Codes/3D_Shape_descriptors.ipynb">3D descriptores generales</a>
 
-Sin embargo, para nuestro caso solo nos interesan aquellos que sean robustoz frente a isometrías (transformaciones rigidas).
-siendo relevante aquellos basados en medidas como curvaturas generales o geodesicas. ligando esto a su vez a sistemas espectrales con enfasis en autovalores y autovectores. Cabe resaltar que las redes neuronales tambien son planteadas como tecnicas robustaz frente a estas variaciones de rotacion y traslación.
+Sin embargo, para nuestro caso solo nos interesan aquellos que sean robustos frente a isometrías (transformaciones rígidas), siendo relevantes aquellos basados en medidas como curvaturas generales o geodésicas, relacionándolos a su vez con sistemas espectrales con énfasis en autovalores y autovectores. Cabe resaltar que las redes neuronales también son consideradas como técnicas robustas frente a estas variaciones de rotación y traslación.
 
 Insertar archivo de kernels geometricos
 Insertar archivo de descriptor NN
 
 
-## Analisis de Correspondencia
+## Análisis de Correspondencia
 
-Finalmente, para validar la correpsondencia de forma....
+Finalmente, para validar la correspondencia de forma, debemos llevar las formas 3D a un entorno de comparación mutuo, donde las rotaciones, traslaciones y cantidad de descriptores a comparar sean iguales.
 
+Por ende, tenemos inicialmente planteadas dos áreas:
+
+Utilizar una transformación lograda entre los descriptores (Fmaps)
+Buscar un espacio latente al cual llevemos nuestros descriptores y podamos compararlos.
+Insertar Fmaps Insertar GraphAE
+
+Por ende tenemos inicialmente plateadas dos areas:
+    1. Utilizar una transformacion lograda entre los descriptores (Fmaps)
+    2. Buscar un espacio latente al cual llevemos nuestros descriptores y podamos compararlos.
+    
 Insertar Fmaps
 Insertar GraphAE
