@@ -40,3 +40,11 @@ Por ende tenemos inicialmente plateadas dos areas:
     
 Insertar Fmaps
 Insertar GraphAE
+
+
+### Fmaps Notes:
+* Fmaps tendrá un costo computacional dependiendo de los descriptores a comparar, este se incrementa especialmente para formas complejas o conjuntos de datos grandes {la matriz generada sería de tamaño NxN (N = # de descriptores)}.
+* Solo realiza comparaciones y transformaciones 1 vs 1, brindando un nivel mínimo de generalización.
+* Las FMAPs pueden no ser robustas ante deformaciones extremas o no lineales en las formas, funcionando especialmente con errores entre formas muy diferentes.
+* Debido a que la matriz de transformación C se logra 1 vs 1, incluso si las figuras son totalmente diferentes y debido a cómo se crea el mapa funcional, tendrán un buen grado de correspondencia.
+* Es necesario que el descriptor a comparar sea robusto frente a rotaciones e isometrías, ya que no se pueden percibir únicamente con el fmaps, lo que afecta la precisión de la correspondencia.
